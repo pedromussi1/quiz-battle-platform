@@ -7,12 +7,13 @@ import authRoutes from './routes/auth.js';
 import quizRoutes from './routes/quizzes.js';
 import playHistoryRoutes from './routes/playHistory.js';
 import categoryRoutes from './routes/categories.js';
+import uploadRoutes from './routes/upload.js';
 
 const app = express();
 
 // Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(
   cors({
     origin: config.frontend.url,
@@ -37,6 +38,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/quizzes', quizRoutes);
 app.use('/api/play-history', playHistoryRoutes);
 app.use('/api/categories', categoryRoutes);
+app.use('/api/upload', uploadRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

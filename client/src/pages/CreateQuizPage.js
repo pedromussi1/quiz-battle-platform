@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { quizAPI, categoryAPI } from '../services/api';
+import ImageUploadWidget from '../components/ImageUploadWidget';
 import './CreateQuizPage.css';
 
 function CreateQuizPage() {
@@ -216,12 +217,9 @@ function CreateQuizPage() {
 
                 <div className="form-group">
                   <label htmlFor={`image-${qIdx}`}>Image URL (optional)</label>
-                  <input
-                    type="url"
-                    id={`image-${qIdx}`}
-                    value={question.imageUrl}
-                    onChange={(e) => handleQuestionChange(qIdx, 'imageUrl', e.target.value)}
-                    placeholder="Enter image URL"
+                  <ImageUploadWidget
+                    currentImageUrl={question.imageUrl}
+                    onUploadComplete={(url) => handleQuestionChange(qIdx, 'imageUrl', url)}
                   />
                 </div>
 
