@@ -1,0 +1,161 @@
+.quiz-detail-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.quiz-detail-header {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  background-color: #ecf0f1;
+}
+
+.quiz-header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quiz-header-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.quiz-detail-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-detail-content h1 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.quiz-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.info-value {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+}
+
+.quiz-description {
+  margin-bottom: 2rem;
+}
+
+.quiz-description h3,
+.quiz-questions-preview h3,
+.bracket-preview h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.quiz-description p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.questions-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ecf0f1;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.question-preview {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid #ecf0f1;
+  align-items: flex-start;
+}
+
+.question-preview:last-child {
+  border-bottom: none;
+}
+
+.question-number {
+  font-weight: 600;
+  color: #3498db;
+  min-width: 25px;
+}
+
+.question-text {
+  color: #555;
+  flex: 1;
+}
+
+.bracket-preview {
+  margin-bottom: 2rem;
+}
+
+.bracket-preview p {
+  color: #555;
+}
+
+.play-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 2rem;
+}
+
+.play-button:hover {
+  background-color: #229954;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  color: #e74c3c;
+}
